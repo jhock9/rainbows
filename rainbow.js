@@ -51,17 +51,13 @@ function draw() {
       noFill(); // DELETE
       let w = floor(random(240, 250));
       let h = floor(random(340, 350));
-
-      
       arc(250, 210, w, h, PI, 0, CHORD);
     }
 
     function rainbow () {
-      for (let i = 350; i > 5; i-=50) {
+      for (let i = 350; i > 5; i-=5) {
         push();
         stroke(random(255), random(255), random(255));
-        w = -100;
-        h = -100;
         drawRainbow();
         pop();
       };
