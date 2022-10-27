@@ -18,7 +18,8 @@ function draw() {
       line(x, random(0, 5), x, random(645, 650));
     };
   };
-  
+  drawPaper();
+
   // let rainbows = function () {
   //   // noStroke();
   //   let colors = ["#22264d", "#af4c21", "#d58b26", "#282c34", "#e6bda5", "#38012b"];
@@ -30,21 +31,43 @@ function draw() {
     // for (let c = 0; c < colors.length; c++) {
     // }
 
+    // function drawRainbow() {
+    //   for (let w = floor(random(240,250)); w > 5; w -= floor(random(5, 20))) {
+    //   }
+    //   for (let h = floor(random(240,250)); h > 5; h -= floor(random(5, 20))) {
+    //   };
+      
+    //   stroke(0);
+    //   // let colors = ["#22264d", "#af4c21", "#d58b26", "#282c34", "#e6bda5", "#38012b"];
+    //   // let randCol = floor(random(colors.length));
+    //   // push();
+    //   // translate(width/2, height/4 + 50);
+    //   // fill(colors[randCol]);
+    //   arc(250, 210, w, h, PI, 0, CHORD);
+    //   // pop()
+    // };
+
     function drawRainbow() {
-      for (let w = floor(random(240,250)); w > 200; w -= floor(random(5, 20))) {
-        for (let h = floor(random(240,250)); h > 100; h -= floor(random(5, 20))) {
-          stroke(0);
-          // let colors = ["#22264d", "#af4c21", "#d58b26", "#282c34", "#e6bda5", "#38012b"];
-          // let randCol = floor(random(colors.length));
-          // push();
-          // translate(width/2, height/4 + 50);
-          // fill(colors[randCol]);
-          arc(250, 210, w, h, PI, 0, CHORD);
-          // pop()
-        };
+      noFill(); // DELETE
+      let w = floor(random(240, 250));
+      let h = floor(random(340, 350));
+
+      
+      arc(250, 210, w, h, PI, 0, CHORD);
+    }
+
+    function rainbow () {
+      for (let i = 350; i > 5; i-=50) {
+        push();
+        stroke(random(255), random(255), random(255));
+        w = -100;
+        h = -100;
+        drawRainbow();
+        pop();
       };
     };
-  //   push();    
+    rainbow();
+    //   push();    
   //   translate(width/2, height/4 + 50);
   //   fill(colors[randCol]);
   //   // fill(colors[randCol]);
@@ -90,7 +113,11 @@ function draw() {
   //   arc(0, 0, 10, 30, PI, 0, CHORD);
   //   pop();
   // }
-
-  drawPaper();
-  drawRainbow();    
+  
+//   let drawArt = function () {
+//     drawRainbow();
+//     drawPaper();
+//   }
+// drawArt ();
 }
+
