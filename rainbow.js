@@ -8,7 +8,6 @@ function setup () {
 }
 
 function draw() {
-
   let drawPaper = function() {
     stroke(245, 238, 231);
     for (let y = 5; y < 645; y++) {
@@ -22,19 +21,17 @@ function draw() {
   function drawRainbows () {
     let w = floor(random(240, 250));
     let h = floor(random(340, 350));
+    let colors = ["#4a4e4d", "#0e9aa7", "#3da4ab", "#f6cd61", "#fe8a71", "#96ceb4", "#ff6f69", "#88d8b0","#fff6e9", "#d2e7ff",
+    "#d58b26", "#e6bda5", "#38012b", "#ad5331", "#f68620", "#cfd0cb", "#184443", "#d0d1cc", "#ebd1b8"];
     noStroke();
 
     for (let i = 350; i > 5; i-=floor(random(10, 100))) {
-      let colors = ["#4a4e4d", "#0e9aa7", "#3da4ab", "#f6cd61", "#fe8a71", "#96ceb4", "#ff6f69", "#88d8b0","#fff6e9", "#d2e7ff",
-      "#d58b26", "#e6bda5", "#38012b", "#ad5331", "#f68620", "#cfd0cb", "#184443", "#d0d1cc", "#ebd1b8"];
       let randCol = floor(random(colors.length));
       fill(colors[randCol]);
       arc(250, 260, w - (w - i), h - (h - i), PI, 0, CHORD);
     }
 
     for (let j = 350; j > 5; j-=floor(random(10, 100))) {
-      let colors = ["#4a4e4d", "#0e9aa7", "#3da4ab", "#f6cd61", "#fe8a71", "#96ceb4", "#ff6f69", "#88d8b0","#fff6e9", "#d2e7ff",
-      "#d58b26", "#e6bda5", "#38012b", "#ad5331", "#f68620", "#cfd0cb", "#184443", "#d0d1cc", "#ebd1b8"];
       let randCol = floor(random(colors.length));
       fill(colors[randCol]);
       arc(250, 550, w - (w - j), h - (h - j), PI, 0, CHORD);
@@ -43,11 +40,4 @@ function draw() {
 
   drawPaper();
   drawRainbows();
-
-  
-//   let drawArt = function () {
-//     drawRainbow();
-//     drawPaper();
-//   }
-// drawArt ();
 }
