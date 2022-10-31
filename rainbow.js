@@ -4,11 +4,11 @@ let h = w * 1.3;
 function setup () {
   createCanvas(w, h);
   select('#canvasBorder').size(w * 1.15, h * 1.112);
-  frameRate (1);
-  // noLoop();
+  frameRate(1)
 }
 
 function draw() {
+  clear();
   let drawPaper = function() {
     stroke(245, 238, 231);
     for (let y = 5; y < 645; y++) {
