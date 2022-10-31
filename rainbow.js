@@ -5,7 +5,7 @@ function setup () {
   createCanvas(w, h);
   select('#canvasBorder').size(w * 1.15, h * 1.112);
   frameRate(1)
-}
+};
 
 function draw() {
   clear();
@@ -31,7 +31,7 @@ function draw() {
       let randCol = floor(random(colors.length));
       fill(colors[randCol]);
       arc(250, 260, w - (w - i), h - (h - i), PI, 0, CHORD);
-    }
+    };
 
     for (let j = 350; j > 5; j-=floor(random(5, 40))) {
       let randCol = floor(random(colors.length));
@@ -42,4 +42,4 @@ function draw() {
 
   drawPaper();
   drawRainbows();
-}
+};
