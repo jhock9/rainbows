@@ -30,7 +30,7 @@ function draw() {
     for (let i = 350; i > 5; i-=floor(random(5, 40))) {
       let randCol = floor(random(colors.length));
       fill(colors[randCol]);
-      arc(width / 2, height / 2, w - (w - i), h - (h - i), 0,  HALF_PI);
+      arc(width / 2, height / 2, w - (w - i), h - (h - i), 0, HALF_PI);
     };
 
     for (let i = 350; i > 5; i-=floor(random(5, 40))) {
