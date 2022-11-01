@@ -19,7 +19,7 @@ function draw() {
     };
   };
 
-  function rainbowLines () {
+  function rainbowCircle () {
     let w = floor(random(240, 250));
     let h = floor(random(340, 350));
     let colors = ["#4a4e4d", "#0e9aa7", "#3da4ab", "#f6cd61", "#fe8a71", "#96ceb4", "#ff6f69", "#88d8b0","#fff6e9", "#d2e7ff",
@@ -43,5 +43,5 @@ function draw() {
   };
 
   drawPaper();
-  rainbowLines();
+  rainbowCircle();
 };
