@@ -25,20 +25,15 @@ function draw() {
     let colors = ["#4a4e4d", "#0e9aa7", "#3da4ab", "#f6cd61", "#fe8a71", "#96ceb4", "#ff6f69", "#88d8b0","#fff6e9", "#d2e7ff",
     "#d58b26", "#e6bda5", "#38012b", "#ad5331", "#f68620", "#cfd0cb", "#184443", "#d0d1cc", "#ebd1b8"];
     noStroke();
+    noFill()
+    translate(width / 2, height / 2);
     // stroke(0);
 
-    for (let i = 350; i > 5; i-=floor(random(5, 40))) {
+    for (let i = 350; i > 5; i-=floor(random(5, 20))) {
       let randCol = floor(random(colors.length));
       // fill(colors[randCol]);
       stroke(colors[randCol]);
-      arc(width / 2, height / 2, w - (w - i), h - (h - i), 0, PI);
-    };
-
-    for (let i = 350; i > 5; i-=floor(random(5, 40))) {
-      let randCol = floor(random(colors.length));
-      // fill(colors[randCol]);
-      stroke(colors[randCol]);
-      arc(width / 2, height / 2, w - (w - i), h - (h - i), PI, TWO_PI);
+      ellipse(0, 0, w - (w - i), h - (h - i));
     };
   };
 
